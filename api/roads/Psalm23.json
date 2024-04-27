@@ -1,0 +1,42 @@
+[
+    {
+        "book_id": 19,
+        "chapter": 23,
+        "verse_number": 1,
+        "title": "Psalm 23",
+        "url": "/roads/Psalm23",
+        "img": "Psalm23.png",
+        "description": "Psalm 23 Is another commonly memorized verse, displaying God's Nearness to us.",
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 23,
+        "verse_number": 2,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 23,
+        "verse_number": 3,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 23,
+        "verse_number": 4,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 23,
+        "verse_number": 5,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 23,
+        "verse_number": 6,
+        "book_name": "Psalms"
+    }
+]

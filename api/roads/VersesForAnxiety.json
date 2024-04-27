@@ -1,0 +1,42 @@
+[
+    {
+        "book_id": 19,
+        "chapter": 94,
+        "verse_number": 19,
+        "title": "Verses For Anxiety",
+        "url": "/roads/VersesForAnxiety",
+        "img": "versesforanxiety.png",
+        "description": "A road with several verses giving comfort to anxiety.",
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 60,
+        "chapter": 5,
+        "verse_number": 7,
+        "book_name": "1 Peter"
+    },
+    {
+        "book_id": 19,
+        "chapter": 34,
+        "verse_number": 17,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 43,
+        "chapter": 14,
+        "verse_number": 7,
+        "book_name": "John"
+    },
+    {
+        "book_id": 19,
+        "chapter": 46,
+        "verse_number": 10,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 23,
+        "chapter": 54,
+        "verse_number": 17,
+        "book_name": "Isaiah"
+    }
+]

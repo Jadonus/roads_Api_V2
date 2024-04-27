@@ -1,0 +1,72 @@
+[
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 1,
+        "title": "Psalm 95",
+        "url": "/roads/Psalm@95",
+        "img": "psalm95.png",
+        "description": "Psalms 95 is a psalm of David, worshiping and praising the lord for his power and strength. ",
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 2,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 3,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 4,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 5,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 6,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 7,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 8,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 9,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 10,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 95,
+        "verse_number": 11,
+        "book_name": "Psalms"
+    }
+]

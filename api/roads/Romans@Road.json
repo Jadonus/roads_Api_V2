@@ -1,0 +1,36 @@
+[
+    {
+        "book_id": 45,
+        "chapter": 3,
+        "verse_number": 23,
+        "title": "Romans Road",
+        "url": "/roads/Romans@Road",
+        "img": "RomansRoad.png",
+        "description": "The Romans Road has some of the most commonly memorized verses. It shows the basics of salvation.",
+        "book_name": "Romans"
+    },
+    {
+        "book_id": 45,
+        "chapter": 6,
+        "verse_number": 23,
+        "book_name": "Romans"
+    },
+    {
+        "book_id": 45,
+        "chapter": 5,
+        "verse_number": 8,
+        "book_name": "Romans"
+    },
+    {
+        "book_id": 45,
+        "chapter": 10,
+        "verse_number": 9,
+        "book_name": "Romans"
+    },
+    {
+        "book_id": 45,
+        "chapter": 10,
+        "verse_number": 10,
+        "book_name": "Romans"
+    }
+]

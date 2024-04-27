@@ -1,0 +1,60 @@
+[
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 1,
+        "title": "In the beginning: Part 1",
+        "description": "This road has the first 9 verses of the bible, showing God creating the world.",
+        "url": "/roads/test",
+        "img": "inthebeginning1.png",
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 2,
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 3,
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 4,
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 5,
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 6,
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 7,
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 8,
+        "book_name": "Genesis"
+    },
+    {
+        "book_id": 1,
+        "chapter": 1,
+        "verse_number": 9,
+        "book_name": "Genesis"
+    }
+]

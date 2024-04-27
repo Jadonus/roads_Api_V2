@@ -1,0 +1,36 @@
+[
+    {
+        "book_id": 19,
+        "chapter": 147,
+        "verse_number": 3,
+        "title": "Healing",
+        "url": "/roads/Healing",
+        "img": "Healing.png",
+        "description": "Several verses about the healing God Brings",
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 24,
+        "chapter": 17,
+        "verse_number": 14,
+        "book_name": "Jeremiah"
+    },
+    {
+        "book_id": 60,
+        "chapter": 2,
+        "verse_number": 24,
+        "book_name": "1 Peter"
+    },
+    {
+        "book_id": 19,
+        "chapter": 146,
+        "verse_number": 8,
+        "book_name": "Psalms"
+    },
+    {
+        "book_id": 19,
+        "chapter": 73,
+        "verse_number": 26,
+        "book_name": "Psalms"
+    }
+]
