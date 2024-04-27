@@ -4,7 +4,6 @@ from flask import jsonify
 import json
 import requests
 from flask import request
-import pantry_wrapper
 import psycopg2
 from database import db
 app = Flask(__name__)
