@@ -41,7 +41,7 @@ def user_dash():
     return jsonify(roads)
 @app.route('/api/dashboard/')
 def dashboard():
-    folder_path = os.path.join(os.getcwd(), "roads")
+    folder_path = os.path.join(os.path.dirname(__file__), "roads")
     all_data = []
     final_data = []
     for filename in os.listdir(folder_path):
