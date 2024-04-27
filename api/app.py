@@ -134,7 +134,8 @@ def getroad():
 
     verse = request.args.get('road')
     is_custom = request.args.get('iscustom')
-    folder_path = os.path.join(os.getcwd(), "roads")
+    folder_path = os.path.join(os.path.dirname(__file__), "roads")
+
     final_path = os.path.join(folder_path, f"{verse}" + ".json")
     forloopgoaround = 1
     final_data = []
