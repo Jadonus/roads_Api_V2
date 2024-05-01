@@ -10,13 +10,7 @@ from .database import db
 app = Flask(__name__)
 pantryid = "f67c5594-75a5-461b-b5d6-5b5b5c27f856"
 POSTGRES_URL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
-POSTGRES_PRISMA_URL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
-POSTGRES_URL_NO_SSL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-east-1.aws.neon.tech:5432/verceldb"
-POSTGRES_URL_NON_POOLING="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
-POSTGRES_USER="default"
-POSTGRES_HOST="ep-tiny-sunset-a4k6xpcc-pooler.us-east-1.aws.neon.tech"
-POSTGRES_PASSWORD="ZIDsl9WuH5rS"
-POSTGRES_DATABASE="verceldb"
+
 
 
 

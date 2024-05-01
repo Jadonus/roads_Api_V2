@@ -113,7 +113,11 @@ class db:
                 cursor.execute("""
                     SELECT translation FROM settings WHERE userid = %s;
                 """, (userid,))
-                return cursor.fetchone()[0]
+                result = cursor.fetchone()
+                if result is not None:
+                   return result[0]
+                else:
+                    return "NLT"
     @staticmethod
     def get_custom_roads_for_user(userid):
         try:
@@ -180,7 +184,7 @@ VALUES ({verse}, {reference}, {userid});
                     userid = cursor.fetchone()[0]
             # Verify the password using bcrypt
             if bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8')):
-                return {"userid":userid}
+                return userid
             else:
                 return {"error": "Wrong Password"}
 
