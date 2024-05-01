@@ -52,6 +52,57 @@ class db:
                 """, (userid, translation))
 
 
+    @staticmethod
+    def get_progress_for_road(userid, road):
+        try:
+            with connection:
+                with connection.cursor() as cursor:
+                    cursor.execute(f"""
+                        SELECT progress FROM roadprogress
+                        WHERE userid='{userid}' AND road='{road}';
+                    """)
+                    return cursor.fetchone()
+
+        except psycopg2.Error as e:
+            print(e)
+
+    @staticmethod
+    def road_progress_update(userid, progress,road):
+        try:
+            with connection:
+                with connection.cursor() as cursor:
+                    cursor.execute("""
+                    CREATE TABLE IF NOT EXISTS roadprogress (
+                        id SERIAL PRIMARY KEY,
+                        progress INTEGER,
+                        userid TEXT,
+                        road TEXT UNIQUE
+                    );
+                    """)
+
+                    # Check if the record already exists
+                    cursor.execute("""
+                        SELECT id FROM roadprogress
+                        WHERE userid = %s AND road = %s;
+                    """, (userid, road))
+                    existing_record = cursor.fetchone()
+
+                    if existing_record:
+                        # If record exists, perform UPDATE
+                        cursor.execute("""
+                            UPDATE roadprogress
+                            SET progress = %s
+                            WHERE userid = %s AND road = %s;
+                        """, (progress, userid, road))
+                    else:
+                        # If record doesn't exist, perform INSERT
+                        cursor.execute("""
+                            INSERT INTO roadprogress (progress, userid, road)
+                            VALUES (%s, %s, %s);
+                        """, (progress, userid, road))
+        except psycopg2.Error as e:
+            print(e)
+        print("done")
 
 
 
@@ -74,7 +125,16 @@ class db:
                     return cursor.fetchall()
         except psycopg2.Error as e:
             return f"Error retrieving custom roads: {e}"
-
+    @staticmethod
+    def get_custom_road(userid, title):
+        try:
+            with connection:
+                with connection.cursor() as cursor:
+                    query = "SELECT * FROM customRoads WHERE userid = %s AND title = %s"
+                    cursor.execute(query, (userid, title))
+                    return cursor.fetchall()
+        except psycopg2.Error as e:
+            return f"Error retrieving custom roads: {e}"
     @staticmethod
     def get_All_In(db):
         with connection:
