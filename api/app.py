@@ -5,8 +5,10 @@ import json
 import requests
 from flask import request
 import psycopg2
-#from database import db
+#rom database import db
 from .database import db
+from urllib.parse import unquote
+
 app = Flask(__name__)
 pantryid = "f67c5594-75a5-461b-b5d6-5b5b5c27f856"
 POSTGRES_URL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
@@ -142,7 +144,8 @@ def getroad():
 
 
     print(translation_value)
-    verse = request.args.get('road')
+    versef = request.args.get('road')
+    verse = unquote(versef)
     is_custom = request.args.get('iscustom')
     folder_path = os.path.join(os.path.dirname(__file__), "roads")
     progress = 70
@@ -167,6 +170,7 @@ def getroad():
         custom_road = db.get_custom_road(title=verse, userid=userid)
         print(custom_road)
         for _, _, data_dict, _ in custom_road:
+            print(data_dict)
             for verse in data_dict:
             # 'data_dict' here represents the dictionary object within each tuple
                 send = {"book": verse['book_name'],  "chapter": str(verse['chapter']),
@@ -189,7 +193,6 @@ def getroad():
                  })
                 print(final_data)
                 if forloopgoaround <= 1:
-                   title = verse["title"]
                    description = verse["description"]
                 forloopgoaround += 1
             # Now you can access individual elements within the dictionary
@@ -234,6 +237,6 @@ def getroad():
         "progress": progress,
         "verses": final_data,
         "description":description,
-        "title": title
+        "title": versef
 
     })
