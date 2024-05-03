@@ -124,11 +124,19 @@ class db:
             with connection:
                 with connection.cursor() as cursor:
                     cursor.execute("""
-                        SELECT * FROM customRoads WHERE userid = %s;
+                            SELECT *
+                            FROM customroads
+                            WHERE userid = %s;
                     """, (userid,))
-                    return cursor.fetchall()
+                    columns = [desc[0] for desc in cursor.description]
+                    data = cursor.fetchall()
+                    results = []
+                    for row in data:
+                        results.append(dict(zip(columns, row)))
+                    return results
         except psycopg2.Error as e:
             return f"Error retrieving custom roads: {e}"
+
     @staticmethod
     def get_custom_road(userid, title):
         try:

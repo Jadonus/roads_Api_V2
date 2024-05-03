@@ -5,8 +5,8 @@ import json
 import requests
 from flask import request
 import psycopg2
-#from database import db
-from .database import db
+from database import db
+#from .database import db
 app = Flask(__name__)
 pantryid = "f67c5594-75a5-461b-b5d6-5b5b5c27f856"
 POSTGRES_URL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
@@ -33,6 +33,7 @@ def new_favorite():
 def user_dash():
     userid = request.args.get("userid")
     roads = db.get_custom_roads_for_user(userid=userid)
+    print(roads)
     return jsonify(roads)
 @app.route('/api/dashboard/')
 def dashboard():
