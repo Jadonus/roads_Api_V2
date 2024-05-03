@@ -31,7 +31,7 @@ def new_favorite():
 
 @app.route("/api/userdash/")
 def user_dash():
-    userid = request.args.get("userid")
+    userid = request.args.get("userid").replace('"', '')
     roads = db.get_custom_roads_for_user(userid=userid)
     print(roads)
     return jsonify(roads)

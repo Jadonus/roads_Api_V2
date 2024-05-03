@@ -130,6 +130,7 @@ class db:
                     """, (userid,))
                     columns = [desc[0] for desc in cursor.description]
                     data = cursor.fetchall()
+                    print(data)
                     results = []
                     for row in data:
                         results.append(dict(zip(columns, row)))
