@@ -76,7 +76,7 @@ class db:
                         id SERIAL PRIMARY KEY,
                         progress INTEGER,
                         userid TEXT,
-                        road TEXT UNIQUE
+                        road TEXT
                     );
                     """)
 
