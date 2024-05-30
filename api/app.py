@@ -34,6 +34,7 @@ def delete_road():
     data = request.json
     userid = data.get("userid")
     road = data.get("roadtodelete")
+    return "Done"
 
 
 @app.route("/api/userdash/")
