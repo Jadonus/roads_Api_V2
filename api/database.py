@@ -37,7 +37,7 @@ class db:
     def delete_road(userid, road):
         with connection:
             with connection.cursor() as cursor:
-                cursor.execute(f"DELETE FROM customroads WHERE title={road} AND userid = {userid}")
+                cursor.execute(f"DELETE FROM customroads WHERE title = '{road}' AND userid = '{userid}'")
 
     @staticmethod
     def translation_settings(userid, translation):
