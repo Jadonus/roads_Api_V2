@@ -34,6 +34,12 @@ class db:
             with connection.cursor() as cursor:
                 cursor.execute(f"SELECT * FROM favorites WHERE userid = {userid}")
     @staticmethod
+    def delete_road(userid, road):
+        with connection:
+            with connection.cursor() as cursor:
+                cursor.execute(f"DELETE FROM customroads WHERE road={road} AND userid = {userid}")
+
+    @staticmethod
     def translation_settings(userid, translation):
         with connection:
             with connection.cursor() as cursor:

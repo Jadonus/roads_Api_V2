@@ -18,7 +18,6 @@ POSTGRES_URL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-
 
 
 
-
 @app.route('/')
 def home():
     return 'Hello, World!'
@@ -30,6 +29,12 @@ def new_favorite():
     verse = data.get("verse")
     db.newFavorite(userid=userid, reference=reference, verse=verse)
     return "Success"
+@app.route("/api/deleteroad/")
+def delete_road():
+    data = request.json
+    userid = data.get("userid")
+    road = data.get("roadtodelete")
+
 
 @app.route("/api/userdash/")
 def user_dash():
