@@ -34,6 +34,7 @@ def delete_road():
     data = request.json
     userid = data.get("userid")
     road = data.get("roadtodelete")
+    db.delete_road(road=road, userid=userid)
     return "Done"
 
 
