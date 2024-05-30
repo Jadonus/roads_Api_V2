@@ -29,7 +29,7 @@ def new_favorite():
     verse = data.get("verse")
     db.newFavorite(userid=userid, reference=reference, verse=verse)
     return "Success"
-@app.route("/api/deleteroad/")
+@app.route("/api/deleteroad/", methods=['POST'])
 def delete_road():
     data = request.json
     userid = data.get("userid")
