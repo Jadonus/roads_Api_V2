@@ -37,6 +37,7 @@ class db:
     def delete_road(userid, road):
         with connection:
             with connection.cursor() as cursor:
+                print(road, userid)
                 cursor.execute(f"DELETE FROM customroads WHERE title = '{road}' AND userid = '{userid}'")
 
     @staticmethod
