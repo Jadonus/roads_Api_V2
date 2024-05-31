@@ -5,8 +5,8 @@ import json
 import requests
 from flask import request
 import psycopg2
-#rom database import db
-from .database import db
+from database import db
+#from .database import db
 from urllib.parse import unquote
 
 app = Flask(__name__)
@@ -21,13 +21,14 @@ POSTGRES_URL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-
 @app.route('/')
 def home():
     return 'Hello, World!'
-@app.route("/api/newfavorite")
+@app.route("/api/newfavorite", methods=['POST'])
 def new_favorite():
     data = request.json
     userid = data.get("userid")
     reference = data.get("reference")
+    road = data.get("road")
     verse = data.get("verse")
-    db.newFavorite(userid=userid, reference=reference, verse=verse)
+    db.newFavorite(userid=userid, reference=reference, verse=verse, road=road)
     return "Success"
 @app.route("/api/deleteroad/", methods=['POST'])
 def delete_road():
@@ -156,6 +157,7 @@ def getroad():
     is_custom = request.args.get('iscustom')
     folder_path = os.path.join(os.path.dirname(__file__), "roads")
     progress = 70
+    favs = []
     if db.get_progress_for_road(userid=userid, road=verse) != None:
 
         progress = db.get_progress_for_road(userid=userid, road=verse)[0]
@@ -240,6 +242,14 @@ def getroad():
 
     if not final_data:
         return "No roads Found"
+    if db.get_favs_for_road(userid=userid, road=verse) != None:
+         print("great")
+         dataa = db.get_favs_for_road(userid=userid, road="Freedom")
+         for d in dataa:
+             print("DAtA",d)
+    else:
+        for f in final_data.count:
+            favs.append(False)
     return jsonify({
         "progress": progress,
         "verses": final_data,

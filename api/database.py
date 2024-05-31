@@ -39,7 +39,12 @@ class db:
             with connection.cursor() as cursor:
                 print(road, userid)
                 cursor.execute(f"DELETE FROM customroads WHERE title = '{road}' AND userid = '{userid}'")
-
+    @staticmethod
+    def get_favs_for_road(userid, road):
+        with connection:
+            with connection.cursor() as cursor:
+                cursor.execute(f"SELECT * FROM favorites WHERE road='Freedom' AND userd = '{userid}'")
+                return cursor.fetchall()
     @staticmethod
     def translation_settings(userid, translation):
         with connection:
@@ -164,7 +169,7 @@ class db:
 
 
     @staticmethod
-    def newFavorite(userid, verse, reference):
+    def newFavorite(userid, verse, reference, road):
         with connection:
             with connection.cursor() as cursor:
 
@@ -173,12 +178,13 @@ class db:
                         id SERIAL PRIMARY KEY,
                         verse TEXT,
                         reference TEXT,
-                        userid TEXT
+                        userid TEXT,
+                        road TEXT
                     );
                 """)
                 cursor.execute(f"""
-INSERT INTO favorites (verse, reference, userid)
-VALUES ({verse}, {reference}, {userid});
+INSERT INTO favorites (verse, reference, userid, road)
+VALUES ({verse}, {reference}, {userid}, {road});
                 """)
 
 
