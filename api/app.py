@@ -5,8 +5,8 @@ import json
 import requests
 from flask import request
 import psycopg2
-from database import db
-#from .database import db
+#from database import db
+from .database import db
 from urllib.parse import unquote
 
 app = Flask(__name__)
