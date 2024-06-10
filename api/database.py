@@ -43,7 +43,7 @@ class db:
     def get_favs_for_road(userid, road):
         with connection:
             with connection.cursor() as cursor:
-                cursor.execute(f"SELECT * FROM favorites WHERE road='Freedom' AND userd = '{userid}'")
+                cursor.execute(f"SELECT * FROM favorites WHERE road='Freedom' AND userid = '{userid}'")
                 return cursor.fetchall()
     @staticmethod
     def translation_settings(userid, translation):
