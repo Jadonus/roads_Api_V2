@@ -23,9 +23,11 @@ def home():
     return 'Hello, World!'
 @app.route("/api/newfavorite", methods=['POST'])
 def new_favorite():
+
     data = request.json
     userid = data.get("userid")
     reference = data.get("reference")
+    print("New thing",userid, reference)
     road = data.get("road")
     verse = data.get("verse")
     db.newFavorite(userid=userid, reference=reference, verse=verse, road=road)
