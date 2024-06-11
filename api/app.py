@@ -244,9 +244,9 @@ def getroad():
 
     if not final_data:
         return "No roads Found"
-    if db.get_favs_for_road(userid=userid, road=verse) != None:
+    if db.get_favs_for_road(userid=userid, road=versef) != None:
          print("great")
-         dataa = db.get_favs_for_road(userid=userid, road="Freedom")
+         dataa = db.get_favs_for_road(userid=userid, road=versef)
          for d in dataa:
              print("DAtA",d)
     else:
