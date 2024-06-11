@@ -21,7 +21,7 @@ POSTGRES_URL="postgres://default:ZIDsl9WuH5rS@ep-tiny-sunset-a4k6xpcc-pooler.us-
 @app.route('/')
 def home():
     return 'Hello, World!'
-@app.route("/api/newfavorite", methods=['POST'])
+@app.route("/api/newfavorite/", methods=['POST'])
 def new_favorite():
 
     data = request.json
